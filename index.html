@@ -1,11 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>checkout page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="general.style.css">
+    <link rel="stylesheet" href="1-checkout.css">
+    <title>checkout page</title>
 </head>
 <body>
-  
+    
+    <main class="checkout">
+      <section class="checkout__billing">
+
+        <h2 class="checkout__billing--title">checkout</h2>
+        <p class="checkout__billing--para">there are 3 products in your cart</p>
+
+        <form class="checkout__billing--form">
+             <h3 class="checkout__billing--form__title">Billing Details</h3>
+
+             <fieldset class="checkout__billing--form__name">
+                <input type="text" placeholder="first name*" />
+                <input type="text" placeholder="last name*" />
+             </fieldset>
+
+             <fieldset class="checkout__billing--form__address">
+                <input type="text" placeholder="address*" />
+                <input type="text" placeholder="address line 2" />
+             </fieldset>
+
+             <fieldset class="checkout__billing--form__country">
+                <section name="country" id="country">
+                    <option>Country*</option>
+                    <option>Australia</option>
+                    <option>Germany</option>
+                    <option>Sweden</option>
+                    <option>Liechtenstein</option>
+                </section>
+
+                <input type="text" placeholder="City/Town" />
+             </fieldset>
+
+             <fieldset class="checkout__billing--form__zipcode">
+                <input type="text" placeholder="Postcode/zip*" />
+                <input type="text" placeholder="phone*" />
+             </fieldset>
+
+             <textarea 
+             name="info"
+              id="info"
+              cols="30"
+              rows="10"
+              placeholder="Additional Information"
+              ></textarea>
+
+              <fieldset class="checkout__billing--form__account">
+                <label for="account">Create Account</label>
+                <input type="checkbox" />
+              </fieldset>
+
+              <fieldset class="checkout__billing--form__shipment">
+                <label for="shipment">Ship to a different address</label>
+                <input type="checkbox">
+              </fieldset>
+
+              <fieldset class="checkout__billing--form__coupon">
+                <label for="coupon">Apply coupon to get discount</label>
+
+                <div>
+                <input type="text" placeholder="Cuopon Code" />
+                <input type="text" placeholder="Apply Code" />
+              </div>
+            </fieldset>
+          </form>
+      </section>
+
+<select class="checkout__order">
+    <h3 class="checkout__order--title">Your Order</h3>
+
+    <div class="checkout__order--details">
+        <div  class="checkout__order--details__name">
+            <h4>Product</h4>
+            <h5>Subtotal</h5>
+        </div>
+
+        <div  class="checkout__order--details__product">
+            <div>
+               <figure  class="checkout__order--details__product--img">
+                <img loading="lazy" src="imgages/1.1.jpg" alt="T-shirt" />
+               </figure> 
+             
+                  <div>
+                    <h4  class="checkout__order--details__product--name">men`s T-shirt</h4>
+                  </div>
+
+                  <div>
+                    <h6  class="checkout__order--details__product--color">
+                        white
+                    </h6>
+                    <h6  class="checkout__order--details__product--size">XL</h6>
+                    <h6  class="checkout__order--details__product--quantity"> 
+                        1x36.00</h6>
+                  </div>
+            </div>
+        </div>
+
+        <h4  class="checkout__order--details__product--price">$36.0</h4>
+    </div>
+
+    <div  class="checkout__order--details__product">
+       <div>
+        <figure  class="checkout__order--details__product--img">
+            <img loading="lazy" src="images/1.2.jpg" alt="T-shirt">
+        </figure>
+
+        <div>
+            <h4  class="checkout__order--details__product--name">
+                men`s T-shirt
+            </h4>
+
+            <div>
+                <h6  class="checkout__order--details__product--color">Blue</h6>
+                <h6  class="checkout__order--details__product--size">XL</h6>
+                <h6  class="checkout__order--details__product--quantity">
+                    1x36.00
+                </h6>
+            </div>
+        </div>
+       </div> 
+       <h4  class="checkout__order--details__product--price">$36.00</h4>
+    </div>
+
+    <div  class="checkout__order--details__product">
+        <div>
+            <figure  class="checkout__order--details__product--img">
+                <img loading="lazy" src="image/1.3.jpg" alt="T-shirt" />
+            </figure>
+
+            <div>
+                <h4  class="checkout__order--details__product--name">women`s T-shirt</h4>
+
+                <div>
+                    <h6  class="checkout__order--details__product--color">Black</h6>
+                    <h6  class="checkout__order--details__product--size">XL</h6>
+                    <H6  class="checkout__order--details__product--quantity">1x36.00</H6>
+                </div>
+            </div>
+        </div>
+
+        <h4  class="checkout__order--details__product--price">$36.00</h4>
+    </div>
+
+    <div  class="checkout__order--details__cost">
+        <div  class="checkout__order--details__cost--subtotal">
+           <h5>Subtotal</h5>
+           <h5>$108.00</h5> 
+        </div>
+
+        <div  class="checkout__order--details__cost--shipping">
+            <h5>Shipping (+)</h5>
+            <h5>$10.00</h5>
+        </div>
+
+        <div  class="checkout__order--details__cost--discount">
+            <h5>Discount (+)</h5>
+            <h5>$9.00</h5>
+        </div>
+    </div>
+
+    <div  class="checkout__order--details__total">
+       <h5>Total payable</h5>
+       <h5>$109.00</h5>
+    </div>
+   </div>
+
+
+   <div class="checkout__order--payment">
+    <h3  class="checkout__order--payment__title">Payment</h3>
+
+    <form  class="checkout__order--payment__form">
+        <fieldset>
+            <label for="bank">Direct Bank Transfer</label>
+            <input type="radio" name="payment" /> 
+        </fieldset>
+
+        <fieldset>
+            <label for="cash">Cash on Delivery</label>
+            <input type="radio" name="payment" />
+        </fieldset>
+    </form>
+   </div>
+
+   <form class="checkout__order--btn">
+    <input type="submit" value="place order" />
+   </form>
+ </select>
+ </main>
 </body>
 </html>
